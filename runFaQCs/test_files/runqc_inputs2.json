@@ -1,5 +1,5 @@
 {
-    "runQC.outDir": "test_out",
+    "runQC.outDir": "/expanse/projects/nmdc/cromwell/cromwell-executions/runQC/test_out",
     "runQC.inputFastq": ["/home/kli/scratch/EDGE_workflows/runFaQCs/test_files/test.1.fastq","/home/kli/scratch/EDGE_workflows/runFaQCs/test_files/test.2.fastq"],
     "runQC.pairedFile": "True"
   }
