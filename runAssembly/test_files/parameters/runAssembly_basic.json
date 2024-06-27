@@ -1,0 +1,6 @@
+{
+    "paired" : ["test_files/SRR8883661_1.fastq","test_files/SRR8883661_2.fastq"],
+    "ref" : "test_files/Drosophila_melanogaster.BDGP6.46.dna.primary_assembly.mitochondrion_genome.fa",
+    "outDir" : "test_basic",
+    "pre" : "t1"
+}
