@@ -134,3 +134,7 @@ workflow {
     runAssembly(singleton_ch, paired_ch, longReads_ch, providedRef)
 
 }
+
+workflow.onComplete  {
+    "rm NO_FILE".execute().text
+}
