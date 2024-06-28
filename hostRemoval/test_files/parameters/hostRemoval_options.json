@@ -1,0 +1,10 @@
+{
+    "outDir":"test_out",
+    "inputFiles": ["path/to/1.fastq", "path/to/2.fastq"],
+    "ref": "path/to/hostfasta.fa",
+    "host": true,
+    "prefix": "adv",
+    "fasta": true,
+    "similarity": 85,
+    "cpus": 5
+}
