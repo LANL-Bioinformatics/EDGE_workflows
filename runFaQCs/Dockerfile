@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
-FROM continuumio/miniconda3:23.5.2-0
+FROM continuumio/miniconda3:23.5.2-0 AS build
 
-ENV container docker
+ENV container=docker
 
 # dependencies for faqcs
 RUN apt-get update -y \
@@ -12,14 +12,28 @@ RUN apt-get update -y \
 RUN conda config --add channels conda-forge \
     && conda config --add channels bioconda
 
+RUN conda init bash \
+  && . ~/.bashrc \
+  && conda create --name runFaQCs \
+  && conda activate runFaQCs 
+
 # install faqcs
-RUN conda install -c bioconda faqcs=2.10
+RUN conda install -n runFaQCs -c bioconda faqcs=2.10
+#RUN conda install -n runFaQCs -c conda-forge jellyfish
+#RUN conda install -n runFaQCs -c conda-forge zlib
+RUN conda install -c conda-forge conda-pack
 
-# add files
-# ADD runQC_subroutines/* /opt/conda/bin/runQC_subroutines/
-ADD *.wdl /opt/conda/bin/
+RUN conda-pack -n runFaQCs -o /tmp/env.tar && \
+    mkdir /venv && cd /venv && tar xf /tmp/env.tar && \
+    rm /tmp/env.tar
 
-# ENV PATH="${PATH}:/opt/conda/bin/runQC_subroutines"
+RUN /venv/bin/conda-unpack
 
-CMD ["/bin/bash"]
+FROM debian:latest AS runtime
+
+COPY --from=build /venv /venv
+ENV PATH=/venv/bin:$PATH
+    
+SHELL ["/bin/bash", "-c"]
+CMD /bin/bash
 

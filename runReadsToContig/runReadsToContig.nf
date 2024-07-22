@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
 process r2c {
+    debug true
     publishDir(
         path: "$params.outDir/AssemblyBasedAnalysis/readsMappingToContig",
         mode: 'copy'
