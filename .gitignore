@@ -2,3 +2,4 @@
 .nextflow*
 */work/*
 */logs/*
+**/ec_info/*

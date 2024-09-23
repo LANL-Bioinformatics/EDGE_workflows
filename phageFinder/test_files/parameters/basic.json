@@ -1,0 +1,7 @@
+{
+    "gffFile" : "test_files/PROJECT.gff",
+    "faaFile" : "test_files/PROJECT.faa",
+    "fnaFile" : "test_files/PROJECT.fna",
+    "numCPU" : 4,
+    "outDir": "test_phageFinder"
+}
