@@ -1,0 +1,8 @@
+{
+    "inputContigs": "test_files/contigs_700up.fa",
+    "taxKingdom": "Bacteria",
+    "evalue": "1e-09",
+    "gcode": "11",
+    "keggView": true,
+    "outDir": "prokka_ann"
+}

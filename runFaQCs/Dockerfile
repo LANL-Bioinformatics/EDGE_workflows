@@ -12,6 +12,7 @@ RUN conda init bash \
   && conda create --name runFaQCs \
   && conda activate runFaQCs 
 
+
 # plotting and trimming software for long reads
 RUN conda install -n runFaQCs -c bioconda nanoplot=1.43.0
 RUN conda install -n runFaQCs -c bioconda porechop
