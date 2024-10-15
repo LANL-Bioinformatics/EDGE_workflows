@@ -1,0 +1,6 @@
+{
+    "numCPU": 4,
+    "input": "${projectDir}/../test_data/contigs.fa",
+    "projName": "BasicAntismashTest",
+    "database": "${projectDir}/../../database/antiSMASH"
+}

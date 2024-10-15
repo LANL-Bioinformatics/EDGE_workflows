@@ -1,0 +1,8 @@
+{
+    "numCPU": 4,
+    "input": "${projectDir}/../test_data/contigs.fa",
+    "projName": "FungiAntismashTest",
+    "database": "${projectDir}/../../database/antiSMASH",
+    "taxon": "fungi",
+    "cassis": true
+}
