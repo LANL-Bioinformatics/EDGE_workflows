@@ -1,5 +1,6 @@
 **/__pycache__/*
 .nextflow*
-*/work/*
+**/work**
 */logs/*
 **/ec_info/*
+.nf-test*

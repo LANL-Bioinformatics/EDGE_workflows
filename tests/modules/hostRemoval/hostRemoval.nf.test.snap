@@ -1,0 +1,106 @@
+{
+    "SE Reads, Single Host": {
+        "content": [
+            {
+                "0": [
+                    
+                ],
+                "1": [
+                    "hostclean.unpaired.fastq:md5,7b1d185d8e9fef1fc68efba3257ca3fb"
+                ],
+                "paired": [
+                    
+                ],
+                "unpaired": [
+                    "hostclean.unpaired.fastq:md5,7b1d185d8e9fef1fc68efba3257ca3fb"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.10.1"
+        },
+        "timestamp": "2024-11-20T18:45:45.584906"
+    },
+    "PE Reads, Multi Host": {
+        "content": [
+            {
+                "0": [
+                    [
+                        "hostclean.1.fastq:md5,e2f29a1147a9f450557cf88ad72400cf",
+                        "hostclean.2.fastq:md5,70927fcae9ee7bdbd98fce66b5d353f3"
+                    ]
+                ],
+                "1": [
+                    "hostclean.unpaired.fastq:md5,a1ace46fc8b5a225afcab35e757e0542"
+                ],
+                "paired": [
+                    [
+                        "hostclean.1.fastq:md5,e2f29a1147a9f450557cf88ad72400cf",
+                        "hostclean.2.fastq:md5,70927fcae9ee7bdbd98fce66b5d353f3"
+                    ]
+                ],
+                "unpaired": [
+                    "hostclean.unpaired.fastq:md5,a1ace46fc8b5a225afcab35e757e0542"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.10.1"
+        },
+        "timestamp": "2024-11-20T18:35:06.56628"
+    },
+    "PE Reads, Single Host": {
+        "content": [
+            {
+                "0": [
+                    [
+                        "hostclean.1.fastq:md5,de55918c54218d510baf01946e97e28b",
+                        "hostclean.2.fastq:md5,6395b18db7f09a6374495d577533dfc0"
+                    ]
+                ],
+                "1": [
+                    "hostclean.unpaired.fastq:md5,d41d8cd98f00b204e9800998ecf8427e"
+                ],
+                "paired": [
+                    [
+                        "hostclean.1.fastq:md5,de55918c54218d510baf01946e97e28b",
+                        "hostclean.2.fastq:md5,6395b18db7f09a6374495d577533dfc0"
+                    ]
+                ],
+                "unpaired": [
+                    "hostclean.unpaired.fastq:md5,d41d8cd98f00b204e9800998ecf8427e"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.10.1"
+        },
+        "timestamp": "2024-11-20T18:41:15.089008"
+    },
+    "SE Reads, Multi Host": {
+        "content": [
+            {
+                "0": [
+                    
+                ],
+                "1": [
+                    "hostclean.unpaired.fastq:md5,8fc35373e3bfb3951e9d7632f3362861"
+                ],
+                "paired": [
+                    
+                ],
+                "unpaired": [
+                    "hostclean.unpaired.fastq:md5,8fc35373e3bfb3951e9d7632f3362861"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.10.1"
+        },
+        "timestamp": "2024-11-20T18:27:35.91726"
+    }
+}

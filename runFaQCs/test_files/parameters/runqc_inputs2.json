@@ -1,4 +1,0 @@
-{
-    "outDir": "test_out",
-    "pairFile": ["../test_data/Ecoli_10x.1.fastq","../test_data/Ecoli_10x.2.fastq"]
-  }

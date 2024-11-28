@@ -1,0 +1,181 @@
+{
+    "Nanopore SE (porechop/nanoplot)": {
+        "content": [
+            {
+                "0": [
+                    
+                ],
+                "1": [
+                    "QC.unpaired.porechop.fastq:md5,b8cdcb5e1eef7bdd518ef4e0a76dc63b"
+                ],
+                "paired": [
+                    
+                ],
+                "unpaired": [
+                    "QC.unpaired.porechop.fastq:md5,b8cdcb5e1eef7bdd518ef4e0a76dc63b"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.2"
+        },
+        "timestamp": "2024-10-29T09:06:54.716065"
+    },
+    "PacBio SE (nanoplot)": {
+        "content": [
+            {
+                "0": [
+                    
+                ],
+                "1": [
+                    "QC.unpaired.trimmed.fastq:md5,b8cdcb5e1eef7bdd518ef4e0a76dc63b"
+                ],
+                "paired": [
+                    
+                ],
+                "unpaired": [
+                    "QC.unpaired.trimmed.fastq:md5,b8cdcb5e1eef7bdd518ef4e0a76dc63b"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.2"
+        },
+        "timestamp": "2024-10-29T09:19:41.968222"
+    },
+    "PolyA removal": {
+        "content": [
+            {
+                "0": [
+                    [
+                        "QC.1.trimmed.fastq:md5,eb49840329af7e3ed2d52cfb44d019d9",
+                        "QC.2.trimmed.fastq:md5,8dd551b2245f963ffe37b69018284501"
+                    ]
+                ],
+                "1": [
+                    "QC.unpaired.trimmed.fastq:md5,d696a313f70f88a47f67c18cc75b683d"
+                ],
+                "paired": [
+                    [
+                        "QC.1.trimmed.fastq:md5,eb49840329af7e3ed2d52cfb44d019d9",
+                        "QC.2.trimmed.fastq:md5,8dd551b2245f963ffe37b69018284501"
+                    ]
+                ],
+                "unpaired": [
+                    "QC.unpaired.trimmed.fastq:md5,d696a313f70f88a47f67c18cc75b683d"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.2"
+        },
+        "timestamp": "2024-10-29T09:08:42.429862"
+    },
+    "Basic SE": {
+        "content": [
+            {
+                "0": [
+                    
+                ],
+                "1": [
+                    "QC.unpaired.trimmed.fastq:md5,b8cdcb5e1eef7bdd518ef4e0a76dc63b"
+                ],
+                "paired": [
+                    
+                ],
+                "unpaired": [
+                    "QC.unpaired.trimmed.fastq:md5,b8cdcb5e1eef7bdd518ef4e0a76dc63b"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.2"
+        },
+        "timestamp": "2024-10-29T09:00:43.702411"
+    },
+    "SE with adapter removal": {
+        "content": [
+            {
+                "0": [
+                    
+                ],
+                "1": [
+                    "QC.unpaired.trimmed.fastq:md5,83011948f673aac52bd300d247c2f6fa"
+                ],
+                "paired": [
+                    
+                ],
+                "unpaired": [
+                    "QC.unpaired.trimmed.fastq:md5,83011948f673aac52bd300d247c2f6fa"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.2"
+        },
+        "timestamp": "2024-10-29T09:08:11.110565"
+    },
+    "Basic PE": {
+        "content": [
+            {
+                "0": [
+                    [
+                        "QC.1.trimmed.fastq:md5,eb49840329af7e3ed2d52cfb44d019d9",
+                        "QC.2.trimmed.fastq:md5,8dd551b2245f963ffe37b69018284501"
+                    ]
+                ],
+                "1": [
+                    "QC.unpaired.trimmed.fastq:md5,d696a313f70f88a47f67c18cc75b683d"
+                ],
+                "paired": [
+                    [
+                        "QC.1.trimmed.fastq:md5,eb49840329af7e3ed2d52cfb44d019d9",
+                        "QC.2.trimmed.fastq:md5,8dd551b2245f963ffe37b69018284501"
+                    ]
+                ],
+                "unpaired": [
+                    "QC.unpaired.trimmed.fastq:md5,d696a313f70f88a47f67c18cc75b683d"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.2"
+        },
+        "timestamp": "2024-10-28T14:51:51.359321"
+    },
+    "PE with adapter removal": {
+        "content": [
+            {
+                "0": [
+                    [
+                        "QC.1.trimmed.fastq:md5,d23266b2e5e5efdd1e086b54ce02f91b",
+                        "QC.2.trimmed.fastq:md5,5f79a0182d6cb56921a9318a060988b2"
+                    ]
+                ],
+                "1": [
+                    "QC.unpaired.trimmed.fastq:md5,d696a313f70f88a47f67c18cc75b683d"
+                ],
+                "paired": [
+                    [
+                        "QC.1.trimmed.fastq:md5,d23266b2e5e5efdd1e086b54ce02f91b",
+                        "QC.2.trimmed.fastq:md5,5f79a0182d6cb56921a9318a060988b2"
+                    ]
+                ],
+                "unpaired": [
+                    "QC.unpaired.trimmed.fastq:md5,d696a313f70f88a47f67c18cc75b683d"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.2"
+        },
+        "timestamp": "2024-10-29T09:07:34.857606"
+    }
+}
