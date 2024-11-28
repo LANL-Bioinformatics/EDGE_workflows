@@ -1,0 +1,16 @@
+{
+    "numCPU": 4,
+    "input": "${projectDir}/../test_data/contigs.fa",
+    "projName": "BasicAntismashTest",
+    "database": "${projectDir}/../../database/antiSMASH",
+    "clusterblast": true,
+    "subclusterblast": true,
+    "knownclusterblast": true,
+    "mibig": true,
+    "smcogs": true,
+    "pfam2go": true,
+    "asf": true,
+    "rre": true,
+    "fullhmm": true,
+    "tigrfam": true
+}
