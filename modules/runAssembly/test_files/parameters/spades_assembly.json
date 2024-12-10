@@ -1,0 +1,7 @@
+{
+    "assembler":"SPAdes",
+    "threads":4,
+    "projName":"test_spades",
+    "pairedFiles":["test_files/Ecoli_10x.1.fastq","test_files/Ecoli_10x.2.fastq"],
+    "outDir": "test_results"
+}

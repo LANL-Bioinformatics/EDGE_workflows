@@ -1,0 +1,82 @@
+nextflow_workflow {
+
+    name "Test Workflow COUNTFASTQ"
+    script "modules/countFastq/countFastq.nf"
+    workflow "COUNTFASTQ"
+
+    test("1 Unpaired File") {
+
+        when {
+            params {
+                // no special parameters
+            }
+            workflow {
+                """
+                input[0] = file("${projectDir}/nf_assets/NO_FILE")
+                input[1] = file("${projectDir}/test_data/Ecoli_10x.1.fastq")
+                """
+            }
+        }
+
+        then {
+            assertAll(
+                {assert workflow.success},
+                {assert snapshot(workflow.out).match()},
+                {assert workflow.out.avgReadLen.get(0) == "151"}
+            )
+            
+        }
+
+    }
+
+    test("1 Pair of PE files") {
+
+        when {
+            params {
+                // no special parameters
+            }
+            workflow {
+                """
+                input[0] = [file("${projectDir}/test_data/Ecoli_10x.1.fastq"),file("${projectDir}/test_data/Ecoli_10x.2.fastq")]
+                input[1] = file("${projectDir}/nf_assets/NO_FILE2")
+                """
+            }
+        }
+
+        then {
+            assertAll(
+                {assert workflow.success},
+                {assert snapshot(workflow.out).match()},
+                {assert workflow.out.avgReadLen.get(0) == "151"}
+            )
+            
+        }
+
+    }
+
+    
+    test("PE and SE files") {
+
+        when {
+            params {
+                // no special parameters
+            }
+            workflow {
+                """
+                input[0] = [file("${projectDir}/test_data/Ecoli_10x.1.fastq"),file("${projectDir}/test_data/Ecoli_10x.2.fastq")]
+                input[1] = file("${projectDir}/test_data/Ecoli_10x_copy.1.fastq")
+                """
+            }
+        }
+
+        then {
+            assertAll(
+                {assert workflow.success},
+                {assert snapshot(workflow.out).match()},
+                {assert workflow.out.avgReadLen.get(0) == "151"}
+            )
+            
+        }
+
+    }
+}

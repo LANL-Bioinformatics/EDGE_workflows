@@ -1,8 +1,0 @@
-{
-    "inputContigs":"test_files/contigs_700up.fa",
-    "annotateProgram":"RAtt",
-    "sourceGBK": "test_files/genomic.gbff",
-    "outDir":"ratt_test",
-    "keggView": true,
-    "taxKingdom": "Bacteria"
-}

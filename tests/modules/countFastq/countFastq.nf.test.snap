@@ -1,0 +1,101 @@
+{
+    "PE and SE files": {
+        "content": [
+            {
+                "0": [
+                    "151"
+                ],
+                "1": [
+                    [
+                        "all.1.fastq:md5,c9cd5b2586c75c7448674ff3ff5451de",
+                        "all.2.fastq:md5,3b69b59ed5c7111e5d57b900174ef2f6"
+                    ]
+                ],
+                "2": [
+                    "all.se.fastq:md5,c9cd5b2586c75c7448674ff3ff5451de"
+                ],
+                "avgReadLen": [
+                    "151"
+                ],
+                "paired": [
+                    [
+                        "all.1.fastq:md5,c9cd5b2586c75c7448674ff3ff5451de",
+                        "all.2.fastq:md5,3b69b59ed5c7111e5d57b900174ef2f6"
+                    ]
+                ],
+                "unpaired": [
+                    "all.se.fastq:md5,c9cd5b2586c75c7448674ff3ff5451de"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.2"
+        },
+        "timestamp": "2024-10-28T13:16:37.86828"
+    },
+    "1 Pair of PE files": {
+        "content": [
+            {
+                "0": [
+                    "151"
+                ],
+                "1": [
+                    [
+                        "all.1.fastq:md5,c9cd5b2586c75c7448674ff3ff5451de",
+                        "all.2.fastq:md5,3b69b59ed5c7111e5d57b900174ef2f6"
+                    ]
+                ],
+                "2": [
+                    
+                ],
+                "avgReadLen": [
+                    "151"
+                ],
+                "paired": [
+                    [
+                        "all.1.fastq:md5,c9cd5b2586c75c7448674ff3ff5451de",
+                        "all.2.fastq:md5,3b69b59ed5c7111e5d57b900174ef2f6"
+                    ]
+                ],
+                "unpaired": [
+                    
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.2"
+        },
+        "timestamp": "2024-10-28T13:18:00.975139"
+    },
+    "1 Unpaired File": {
+        "content": [
+            {
+                "0": [
+                    "151"
+                ],
+                "1": [
+                    
+                ],
+                "2": [
+                    "all.se.fastq:md5,c9cd5b2586c75c7448674ff3ff5451de"
+                ],
+                "avgReadLen": [
+                    "151"
+                ],
+                "paired": [
+                    
+                ],
+                "unpaired": [
+                    "all.se.fastq:md5,c9cd5b2586c75c7448674ff3ff5451de"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.2"
+        },
+        "timestamp": "2024-10-28T13:10:05.310905"
+    }
+}

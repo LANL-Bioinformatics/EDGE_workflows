@@ -1,7 +1,0 @@
-{
-    "assembler":"IDBA_UD",
-    "threads":4,
-    "projName":"test_idba",
-    "pairedFiles":["test_files/Ecoli_10x.1.fastq","test_files/Ecoli_10x.2.fastq"],
-    "outDir": "test_results"
-}
