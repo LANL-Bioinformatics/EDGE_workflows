@@ -1,0 +1,9 @@
+{
+    "cpus":4,
+    "pairFile":["test_files/Ecoli_10x.1.fastq","test_files/Ecoli_10x.2.fastq"],
+    "contigFile":"test_files/contigs.fa",
+    "outDir": "forTaxonomy",
+    "prefix": "basic",
+    "extractUnmapped": false,
+    "r2c_aligner": "bowtie"
+}

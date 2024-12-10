@@ -1,0 +1,2 @@
+test_data/Homo_sapiens.GRCh38.dna.chromosome.1.fa filter=lfs diff=lfs merge=lfs -text
+test_data/Homo_sapiens.GRCh38.dna.chromosome.2.fa filter=lfs diff=lfs merge=lfs -text

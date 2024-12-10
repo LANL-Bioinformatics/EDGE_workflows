@@ -1,5 +1,0 @@
-{
-    "accessions": ["SRR29484015"],
-    "outdir": "test_out/platform",
-    "platform_restrict": "PACBIO_SMRT"
-  }

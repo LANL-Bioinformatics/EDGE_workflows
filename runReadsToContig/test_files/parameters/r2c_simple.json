@@ -1,8 +1,0 @@
-{
-    "cpus":4,
-    "pairFile":["test_files/Ecoli_10x.1.fastq","test_files/Ecoli_10x.2.fastq"],
-    "contigFile":"test_files/contigs.fa",
-    "outDir": "test_out",
-    "prefix": "basic",
-    "extractUnmapped": true
-}
