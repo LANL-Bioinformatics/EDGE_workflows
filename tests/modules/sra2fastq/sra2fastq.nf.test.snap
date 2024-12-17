@@ -1,0 +1,202 @@
+{
+    "Multiple accessions": {
+        "content": [
+            {
+                "0": [
+                    [
+                        "SRX20564104_1.fastq.gz:md5,4e4c4f89c097d782364f55a4828ba4c3",
+                        "SRX20564104_2.fastq.gz:md5,0a56586f63e03fc3c9d2cb26213b80f0"
+                    ],
+                    [
+                        "SRX24960352_1.fastq.gz:md5,e869779afbd424971f7e41aa342836cc",
+                        "SRX24960352_2.fastq.gz:md5,cb316c949fcb308017bbfe8ff5863752"
+                    ]
+                ],
+                "1": [
+                    "SRR11241255.fastq.gz:md5,2df0fa97a124de8b8d4d939f024bd594",
+                    "SRR29462562.fastq.gz:md5,31506ee0f339cb6398dd326d5cb23b77"
+                ],
+                "paired": [
+                    [
+                        "SRX20564104_1.fastq.gz:md5,4e4c4f89c097d782364f55a4828ba4c3",
+                        "SRX20564104_2.fastq.gz:md5,0a56586f63e03fc3c9d2cb26213b80f0"
+                    ],
+                    [
+                        "SRX24960352_1.fastq.gz:md5,e869779afbd424971f7e41aa342836cc",
+                        "SRX24960352_2.fastq.gz:md5,cb316c949fcb308017bbfe8ff5863752"
+                    ]
+                ],
+                "unpaired": [
+                    "SRR11241255.fastq.gz:md5,2df0fa97a124de8b8d4d939f024bd594",
+                    "SRR29462562.fastq.gz:md5,31506ee0f339cb6398dd326d5cb23b77"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.2"
+        },
+        "timestamp": "2024-10-23T16:05:34.897015"
+    },
+    "Filtered Accessions": {
+        "content": [
+            {
+                "0": [
+                    
+                ],
+                "1": [
+                    "SRX26473729.fastq.gz:md5,64e17afb49765db68336dbc9669f8a0d"
+                ],
+                "paired": [
+                    
+                ],
+                "unpaired": [
+                    "SRX26473729.fastq.gz:md5,64e17afb49765db68336dbc9669f8a0d"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.2"
+        },
+        "timestamp": "2024-10-23T16:56:11.003119"
+    },
+    "Ensure not OXFORD_NANOPORE platform": {
+        "content": [
+            {
+                "0": [
+                    
+                ],
+                "1": [
+                    
+                ],
+                "paired": [
+                    
+                ],
+                "unpaired": [
+                    
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.2"
+        },
+        "timestamp": "2024-10-23T17:03:58.552875"
+    },
+    "Only Download Unique Accessions": {
+        "content": [
+            {
+                "0": [
+                    
+                ],
+                "1": [
+                    "SRR29462562.fastq.gz:md5,31506ee0f339cb6398dd326d5cb23b77"
+                ],
+                "paired": [
+                    
+                ],
+                "unpaired": [
+                    "SRR29462562.fastq.gz:md5,31506ee0f339cb6398dd326d5cb23b77"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.2"
+        },
+        "timestamp": "2024-10-23T16:03:32.397274"
+    },
+    "Ensure ILLUMINA platform": {
+        "content": [
+            {
+                "0": [
+                    
+                ],
+                "1": [
+                    "SRR29462562.fastq.gz:md5,31506ee0f339cb6398dd326d5cb23b77"
+                ],
+                "paired": [
+                    
+                ],
+                "unpaired": [
+                    "SRR29462562.fastq.gz:md5,31506ee0f339cb6398dd326d5cb23b77"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.2"
+        },
+        "timestamp": "2024-10-23T16:01:45.248109"
+    },
+    "Ensure not PACBIO_SMRT platform": {
+        "content": [
+            {
+                "0": [
+                    
+                ],
+                "1": [
+                    
+                ],
+                "paired": [
+                    
+                ],
+                "unpaired": [
+                    
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.2"
+        },
+        "timestamp": "2024-10-23T17:03:47.363828"
+    },
+    "Clean Output": {
+        "content": [
+            {
+                "0": [
+                    
+                ],
+                "1": [
+                    "SRR29462562.fastq.gz:md5,31506ee0f339cb6398dd326d5cb23b77"
+                ],
+                "paired": [
+                    
+                ],
+                "unpaired": [
+                    "SRR29462562.fastq.gz:md5,31506ee0f339cb6398dd326d5cb23b77"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.2"
+        },
+        "timestamp": "2024-10-23T16:04:16.360353"
+    },
+    "Basic workflow": {
+        "content": [
+            {
+                "0": [
+                    
+                ],
+                "1": [
+                    "SRR29462562.fastq.gz:md5,31506ee0f339cb6398dd326d5cb23b77"
+                ],
+                "paired": [
+                    
+                ],
+                "unpaired": [
+                    "SRR29462562.fastq.gz:md5,31506ee0f339cb6398dd326d5cb23b77"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.2"
+        },
+        "timestamp": "2024-10-23T16:01:03.780856"
+    }
+}

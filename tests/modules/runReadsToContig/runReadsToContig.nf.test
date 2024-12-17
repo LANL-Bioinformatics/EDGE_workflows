@@ -1,0 +1,101 @@
+nextflow_workflow {
+
+    name "Test Workflow READSTOCONTIGS"
+    script "modules/runReadsToContig/runReadsToContig.nf"
+    workflow "READSTOCONTIGS"
+
+    test("BWA mem") {
+
+        when {
+            params {
+                shared {
+                    outDir = "./testing_output"
+                    projName = "testR2C"
+                }
+                r2c {
+                    r2c_aligner = "bwa"
+                    extractUnmapped = true
+                }
+            }
+            workflow {
+                """
+                input[0] = params.r2c.plus(params.shared)
+                input[1] = [file("${projectDir}/test_data/Ecoli_10x.1.fastq"),file("${projectDir}/test_data/Ecoli_10x.2.fastq")]
+                input[2] = file("${projectDir}/nf_assets/NO_FILE2")
+                input[3] = file("${projectDir}/test_data/contigs.fa")
+                """
+            }
+        }
+
+        then {
+            assertAll(
+                {assert workflow.success}
+            ) 
+        }
+
+    }
+
+    test("Bowtie2") {
+
+        when {
+            params {
+                shared {
+                    outDir = "./testing_output"
+                    projName = "testR2C"
+                }
+                r2c {
+                    r2c_aligner = "bowtie2"
+                    extractUnmapped = true
+                }
+            }
+            workflow {
+                """
+                input[0] = params.r2c.plus(params.shared)
+                input[1] = [file("${projectDir}/test_data/Ecoli_10x.1.fastq"),file("${projectDir}/test_data/Ecoli_10x.2.fastq")]
+                input[2] = file("${projectDir}/nf_assets/NO_FILE2")
+                input[3] = file("${projectDir}/test_data/contigs.fa")
+                """
+            }
+        }
+
+        then {
+            assertAll(
+                {assert workflow.success}
+            ) 
+        }
+
+    }
+
+    test("minimap2") {
+
+        when {
+            params {
+                shared {
+                    outDir = "./testing_output"
+                    projName = "testR2C"
+                }
+                r2c {
+                    r2c_aligner = "minimap2"
+                    extractUnmapped = true
+                }
+            }
+            workflow {
+                """
+                input[0] = params.r2c.plus(params.shared)
+                input[1] = [file("${projectDir}/test_data/Ecoli_10x.1.fastq"),file("${projectDir}/test_data/Ecoli_10x.2.fastq")]
+                input[2] = file("${projectDir}/nf_assets/NO_FILE2")
+                input[3] = file("${projectDir}/test_data/contigs.fa")
+                """
+            }
+        }
+
+        then {
+            assertAll(
+                {assert workflow.success}
+            ) 
+        }
+
+    }
+
+
+}

@@ -1,7 +1,0 @@
-{
-    "outDir":"test_out",
-    "inputFiles": ["test_files/SRR28835063_1.fastq", "test_files/SRR28835063_2.fastq"],
-    "host": "test_files/Gallus_gallus.bGalGal1.mat.broiler.GRCg7b.dna.toplevel.fa",
-    "similarity": 85,
-    "cpus": 5
-}

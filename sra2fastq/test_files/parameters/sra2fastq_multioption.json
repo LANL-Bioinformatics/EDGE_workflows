@@ -1,6 +1,0 @@
-{
-    "accessions": ["SRR29462562"],
-    "platform_restrict": "Illumina",
-    "outdir": "test_out/multioption",
-    "clean": true
-  }

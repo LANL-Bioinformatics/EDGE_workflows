@@ -1,0 +1,173 @@
+nextflow_workflow {
+
+    name "Test Workflow ASSEMBLY"
+    script "modules/runAssembly/runAssembly.nf"
+    workflow "ASSEMBLY"
+
+    test("IDBA") {
+
+        when {
+            params {
+                shared {
+                    outDir = "./testing_output"
+                    projName = "testAssembly"
+                }
+                assembly{
+                    assembler = "IDBA_UD"
+                }
+            }
+            workflow {
+                """
+                input[0] = params.assembly.plus(params.shared)
+                input[1] = [file("${projectDir}/test_data/Ecoli_10x.1.fastq"),file("${projectDir}/test_data/Ecoli_10x.2.fastq")]
+                input[2] = file("${projectDir}/nf_assets/NO_FILE2")
+                input[3] = channel.of("151")
+                """
+            }
+        }
+
+        then {
+            assertAll(
+                {assert workflow.success},
+                {assert file(workflow.out.outContigs.find { file(it).name == "testAssembly_contigs.fa" }).exists()},
+                {assert file(workflow.out.annotationContigs.find { file(it).name == "testAssembly_contigs_700up.fa" }).exists()}
+            ) 
+        }
+
+    }
+
+    test("SPAdes") {
+
+        when {
+            params {
+                shared {
+                    outDir = "./testing_output"
+                    projName = "testAssembly"
+                }
+                assembly{
+                    assembler = "spades"
+                }
+            }
+            workflow {
+                """
+                input[0] = params.assembly.plus(params.shared)
+                input[1] = [file("${projectDir}/test_data/Ecoli_10x.1.fastq"),file("${projectDir}/test_data/Ecoli_10x.2.fastq")]
+                input[2] = file("${projectDir}/nf_assets/NO_FILE2")
+                input[3] = channel.of("151")
+                """
+            }
+        }
+
+        then {
+            assertAll(
+                {assert workflow.success},
+                {assert file(workflow.out.outContigs.find { file(it).name == "testAssembly_contigs.fa" }).exists()},
+                {assert file(workflow.out.annotationContigs.find { file(it).name == "testAssembly_contigs_700up.fa" }).exists()}
+            ) 
+        }
+
+    }
+
+
+    test("LRASM") {
+
+        when {
+            params {
+                shared {
+                    outDir = "./testing_output"
+                    projName = "testAssembly"
+                }
+                assembly{
+                    assembler = "lrasm"
+                    lrasm {
+                        ec = true
+                    }
+                }
+            }
+            workflow {
+                """
+                input[0] = params.assembly.plus(params.shared)
+                input[1] = [file("${projectDir}/nf_assets/NO_FILE")]
+                input[2] = file("${projectDir}/test_data/reads.fastq.gz")
+                input[3] = channel.of("151")
+                """
+            }
+        }
+
+        then {
+            assertAll(
+                {assert workflow.success},
+                {assert file(workflow.out.outContigs.find { file(it).name == "testAssembly_contigs.fa" }).exists()},
+                {assert file(workflow.out.annotationContigs.find { file(it).name == "testAssembly_contigs_700up.fa" }).exists()}
+            ) 
+        }
+
+    }
+
+
+    test("Unicycler") {
+
+        when {
+            params {
+                shared {
+                    outDir = "./testing_output"
+                    projName = "testAssembly"
+                }
+                assembly{
+                    assembler = "Unicycler"
+                }
+            }
+            workflow {
+                """
+                input[0] = params.assembly.plus(params.shared)
+                input[1] = [file("${projectDir}/test_data/Ecoli_10x.1.fastq"),file("${projectDir}/test_data/Ecoli_10x.2.fastq")]
+                input[2] = file("${projectDir}/nf_assets/NO_FILE2")
+                input[3] = channel.of("151")
+                """
+            }
+        }
+
+        then {
+            assertAll(
+                {assert workflow.success},
+                {assert file(workflow.out.outContigs.find { file(it).name == "testAssembly_contigs.fa" }).exists()},
+                {assert file(workflow.out.annotationContigs.find { file(it).name == "testAssembly_contigs_700up.fa" }).exists()}
+            ) 
+        }
+
+    }
+
+
+    test("MEGAHIT") {
+
+        when {
+            params {
+                shared {
+                    outDir = "./testing_output"
+                    projName = "testAssembly"
+                }
+                assembly{
+                    assembler = "megahit"
+                }
+            }
+            workflow {
+                """
+                input[0] = params.assembly.plus(params.shared)
+                input[1] = [file("${projectDir}/test_data/Ecoli_10x.1.fastq"),file("${projectDir}/test_data/Ecoli_10x.2.fastq")]
+                input[2] = file("${projectDir}/nf_assets/NO_FILE2")
+                input[3] = channel.of("151")
+                """
+            }
+        }
+
+        then {
+            assertAll(
+                {assert workflow.success},
+                {assert file(workflow.out.outContigs.find { file(it).name == "testAssembly_contigs.fa" }).exists()},
+                {assert file(workflow.out.annotationContigs.find { file(it).name == "testAssembly_contigs_700up.fa" }).exists()}
+            )
+        }
+
+    }
+
+}

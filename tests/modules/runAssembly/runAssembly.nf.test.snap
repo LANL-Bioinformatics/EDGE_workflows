@@ -1,0 +1,48 @@
+{
+    "SPAdes": {
+        "content": [
+            {
+                "0": [
+                    "testAssembly_contigs.fa:md5,b205c190c365337380dee8a3bcc535e4"
+                ],
+                "1": [
+                    "testAssembly_contigs_700up.fa:md5,149b7cd8d5110b39c33c284429c5f086"
+                ],
+                "annotationContigs": [
+                    "testAssembly_contigs_700up.fa:md5,149b7cd8d5110b39c33c284429c5f086"
+                ],
+                "outContigs": [
+                    "testAssembly_contigs.fa:md5,b205c190c365337380dee8a3bcc535e4"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.10.1"
+        },
+        "timestamp": "2024-11-25T13:45:36.26872"
+    },
+    "IDBA": {
+        "content": [
+            {
+                "0": [
+                    "testAssembly_contigs.fa:md5,03db7c3078458dd0ca091fa0662b140e"
+                ],
+                "1": [
+                    "testAssembly_contigs_700up.fa:md5,aa162c4f9a3684c7fcfd55dd044de22c"
+                ],
+                "annotationContigs": [
+                    "testAssembly_contigs_700up.fa:md5,aa162c4f9a3684c7fcfd55dd044de22c"
+                ],
+                "outContigs": [
+                    "testAssembly_contigs.fa:md5,03db7c3078458dd0ca091fa0662b140e"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.10.1"
+        },
+        "timestamp": "2024-11-25T13:33:59.338422"
+    }
+}

@@ -1,0 +1,249 @@
+nextflow_workflow {
+
+    name "Test Workflow SRA2FASTQ"
+    script "modules/sra2fastq/sra2fastq.nf"
+    workflow "SRA2FASTQ"
+
+    test("Basic workflow") {
+
+        when {
+            params {
+                shared {
+                    outDir = "./testing_output"
+                    projName = "PROJECT"
+                    cpus = 4
+                }
+                sra2fastq {
+                    accessions = ["SRR29462562"]
+                }
+            }
+            workflow {
+                """
+                input[0] = params.sra2fastq.plus(params.shared)
+                """
+            }
+        }
+
+        then {
+            assertAll(
+                {assert workflow.success },
+                {assert snapshot(workflow.out).match()}
+            )
+        }
+
+    }
+    
+    test("Ensure ILLUMINA platform") {
+
+        when {
+            params {
+                shared {
+                    outDir = "./testing_output"
+                    projName = "PROJECT"
+                    cpus = 4
+                }
+                sra2fastq {
+                    platformRestrict = "Illumina"
+                    accessions = ["SRR29462562"]
+                }
+            }
+            workflow {
+                """
+                input[0] = params.sra2fastq.plus(params.shared)
+                """
+            }
+        }
+
+        then {
+            assertAll (
+                {assert workflow.success},
+                {assert snapshot(workflow.out).match()}
+            )
+        }
+
+    }
+
+    test("Ensure not PACBIO_SMRT platform") {
+
+        when {
+            params {
+                shared {
+                    outDir = "./testing_output"
+                    projName = "PROJECT"
+                    cpus = 4
+                }
+                sra2fastq {
+                    platformRestrict = "PACBIO_SMRT"
+                    accessions = ["SRR29462562"]
+                }
+            }
+            workflow {
+                """
+                input[0] = params.sra2fastq.plus(params.shared)
+                """
+            }
+        }
+
+        then {
+            assertAll(
+                {assert workflow.success},
+                {assert workflow.out.paired.size() == 0},
+                {assert workflow.out.unpaired.size() == 0},
+                {assert snapshot(workflow.out).match()}
+            )
+        }
+
+    }
+    test("Ensure not OXFORD_NANOPORE platform") {
+
+        when {
+            params {
+                shared {
+                    outDir = "./testing_output"
+                    projName = "PROJECT"
+                    cpus = 4
+                }
+                sra2fastq {
+                    platformRestrict = "OXFORD_NANOPORE"
+                    accessions = ["SRR29462562"]
+                }
+            }
+            workflow {
+                """
+                input[0] = params.sra2fastq.plus(params.shared)
+                """
+            }
+        }
+
+        then {
+            assertAll (
+                {assert workflow.success},
+                {assert workflow.out.paired.size() == 0},
+                {assert workflow.out.unpaired.size() == 0},
+                {assert snapshot(workflow.out).match()}
+            )
+        }
+
+    }
+    test("Only Download Unique Accessions") {
+
+        when {
+            params {
+                shared {
+                    outDir = "./testing_output"
+                    projName = "PROJECT"
+                    cpus = 4
+                }
+                sra2fastq {
+                    accessions = ["SRR29462562","SRR29462562","SRR29462562","SRR29462562","SRR29462562"]
+                }
+            }
+            workflow {
+                """
+                input[0] = params.sra2fastq.plus(params.shared)
+                """
+            }
+        }
+
+        then {
+            assertAll (
+                {assert workflow.success},
+                {assert snapshot(workflow.out).match()},
+                {assert workflow.trace.succeeded().size() == 1},
+                {assert workflow.out.unpaired.size() == 1}
+            )
+        }
+
+    }
+    test("Clean Output") {
+
+        when {
+            params {
+                shared {
+                    outDir = "./testing_output"
+                    projName = "PROJECT"
+                    cpus = 4
+                }
+                sra2fastq {
+                    accessions = ["SRR29462562"]
+                    clean = true
+                }
+            }
+            workflow {
+                """
+                input[0] = params.sra2fastq.plus(params.shared)
+                """
+            }
+        }
+
+        then {
+            assertAll (
+                {assert workflow.success},
+                {assert snapshot(workflow.out).match()}
+            )
+        }
+
+    }
+    test("Multiple accessions") {
+
+        when {
+            params {
+                shared {
+                    outDir = "./testing_output"
+                    projName = "PROJECT"
+                    cpus = 4
+                }
+                sra2fastq {
+                    accessions = ["SRR11241255", "SRX20564104", "SRR29462562", "SRX24960352"]
+                    clean = true
+                }
+            }
+            workflow {
+                """
+                input[0] = params.sra2fastq.plus(params.shared)
+                """
+            }
+        }
+
+        then {
+            assertAll (
+                {assert workflow.success},
+                {assert snapshot(workflow.out).match()},
+                {assert workflow.out.unpaired.size() == 2},
+                {assert workflow.out.paired.size() == 2}
+            )
+        }
+
+    }
+    test("Filtered Accessions") {
+
+        when {
+            params {
+                shared {
+                    outDir = "./testing_output"
+                    projName = "PROJECT"
+                    cpus = 4
+                }
+                sra2fastq {
+                    accessions = ["SRR11241255", "SRX20564104", "SRR29462562", "SRX24960352", "SRX26473729"]
+                    platformRestrict = "PACBIO_SMRT"
+                    clean = true
+                }
+            }
+            workflow {
+                """
+                input[0] = params.sra2fastq.plus(params.shared)
+                """
+            }
+        }
+
+        then {
+            assertAll (
+                {assert workflow.success},
+                {assert snapshot(workflow.out).match()},
+                {assert workflow.out.unpaired.size() == 1}
+            )
+        }
+
+    }
+}

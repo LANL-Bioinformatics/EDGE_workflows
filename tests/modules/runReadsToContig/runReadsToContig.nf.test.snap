@@ -1,0 +1,14 @@
+{
+    "BWA mem": {
+        "content": [
+            "Final_contigs.fasta:md5,cfb6bc7595556231e115e5c9ad57f20d",
+            "readsToContigs_coverage.table.json:md5,ea221b314df455a84177b669edb3e5b7",
+            "readsToContigs.alnstats.txt:md5,259f501e745b79cb92b69e335d01cac7"
+        ],
+        "meta": {
+            "nf-test": "0.9.2",
+            "nextflow": "24.10.2"
+        },
+        "timestamp": "2024-12-17T13:52:25.552513444"
+    }
+}
